@@ -1,0 +1,1573 @@
+# capgemini_brand.md — Operational Brand Guidelines for Cowork Outputs
+
+> Purpose: make generated HTML dashboards and PowerPoint decks feel aligned with Capgemini’s visual identity.
+> Use this file as the primary design instruction file for Cowork.
+> Use the provided Capgemini logo file as the source of truth for the logo asset.
+> If a PDF or reference deck is also provided, use it only as a secondary visual reference.
+
+---
+
+## 1. Design objective
+
+Every generated deliverable must feel:
+
+- Capgemini-branded;
+- executive-ready;
+- precise;
+- clear;
+- professional;
+- human;
+- energetic without becoming decorative;
+- suitable for a senior business audience.
+
+The goal is not to create a generic corporate dashboard or a generic consulting deck.
+
+The goal is to create outputs that feel aligned with Capgemini’s identity:
+
+```text
+Technology with a human touch.
+People matter, results count.
+```
+
+Capgemini’s visual identity is built around:
+
+- a human, handwritten wordmark;
+- the spade symbol;
+- a strong blue color system;
+- bold but controlled brand shapes;
+- clean typography;
+- clear information design;
+- a balance between precision and energy.
+
+For this workshop, default to a **Considered clarity** style:
+
+- clean layouts;
+- high readability;
+- restrained use of graphic shapes;
+- strong white / gray space;
+- precise information hierarchy;
+- limited color use;
+- executive-level density.
+
+Use **Vibrant dynamism** only for:
+
+- covers;
+- section dividers;
+- major hero blocks;
+- occasional emphasis.
+
+Do not use a “Full-of-life” style unless explicitly requested. It is too expressive for most COMEX dashboard and deck outputs.
+
+---
+
+## 2. Non-negotiable design rules
+
+Always follow these rules:
+
+1. Use the Capgemini logo from the provided logo file.
+2. Never recreate the logo manually.
+3. Never distort, stretch, crop, recolor, shadow, outline, box, or redraw the logo.
+4. Never use the wordmark without the spade symbol.
+5. Never rearrange the logo components.
+6. Never use the spade symbol as a pattern, decorative background, text container, or random graphic ornament.
+7. Use Capgemini colors only.
+8. Use a limited palette per deliverable.
+9. Preserve readability over decoration.
+10. Every chart, table, card, KPI and recommendation must be easy to understand.
+11. Source links and source references must remain visible.
+12. Do not hide sources for the sake of design.
+13. Do not create generic startup SaaS UI.
+14. Do not create a raw Excel-looking dashboard.
+15. Do not overload slides.
+16. Do not use drop shadows unless extremely subtle and necessary for depth.
+17. Do not use random gradients.
+18. Do not use neon colors outside the approved palette.
+19. Do not use weak stock imagery.
+20. If exact Capgemini graphic shape assets are unavailable, approximate the spirit using clean curved blocks and controlled brand colors, but do not imitate the logo or redraw the spade.
+
+---
+
+## 3. Color system
+
+### 3.1 Primary brand colors
+
+Use these as the core palette.
+
+```css
+:root {
+  --capgemini-blue: #0070AD;      /* RGB 0,112,173 — Capgemini Blue */
+  --vibrant-blue: #12ABDB;        /* RGB 18,171,219 — Vibrant Blue */
+  --deep-purple: #2B0A3D;         /* RGB 43,10,61 — Deep Purple */
+  --tech-red: #FF304C;            /* RGB 255,48,76 — Tech Red */
+  --zest-green: #95E616;          /* RGB 149,230,22 — Zest Green */
+  --capgemini-gray: #ECECEC;      /* RGB 236,236,236 — Cool Grey 1 */
+  --white: #FFFFFF;
+}
+```
+
+### 3.2 Primary usage
+
+Use colors with a clear hierarchy:
+
+| Token | Hex | Use |
+|---|---:|---|
+| `--capgemini-blue` | `#0070AD` | Logo color, key accents, links, primary chart series, section lines |
+| `--vibrant-blue` | `#12ABDB` | Highlights, secondary accents, active states, badges |
+| `--deep-purple` | `#2B0A3D` | Dark sections, strong contrast backgrounds, high-emphasis title blocks |
+| `--tech-red` | `#FF304C` | Risk, warning, urgency, negative movement |
+| `--zest-green` | `#95E616` | Opportunity, growth, positive signal, highlight accent |
+| `--capgemini-gray` | `#ECECEC` | Page background, neutral canvas, photography / illustration background |
+| `--white` | `#FFFFFF` | Content surface, cards, whitespace |
+
+### 3.3 Recommended extended UI tokens
+
+Use these derived tokens for dashboards and decks.
+
+```css
+:root {
+  --bg-page: #ECECEC;
+  --bg-surface: #FFFFFF;
+  --bg-surface-soft: #F7F9FB;
+
+  --text-main: #1C1C1C;
+  --text-strong: #2B0A3D;
+  --text-muted: #5F6B73;
+  --text-inverse: #FFFFFF;
+
+  --border-subtle: #D7DEE3;
+  --border-strong: #B8C4CC;
+
+  --link: #0070AD;
+  --link-hover: #12ABDB;
+
+  --signal-risk: #FF304C;
+  --signal-opportunity: #95E616;
+  --signal-neutral: #0070AD;
+  --signal-watch: #12ABDB;
+}
+```
+
+### 3.4 Color discipline
+
+Use no more than **3 main colors** in a dense content layout.
+
+Recommended COMEX palette:
+
+```text
+White / Gray background
++ Deep Purple for strong titles
++ Capgemini Blue for navigation, links and structure
++ Vibrant Blue for active highlights
++ Tech Red / Zest Green only for risk / opportunity semantics
+```
+
+For charts and dashboards:
+
+- use Capgemini Blue as the default main data color;
+- use Vibrant Blue as secondary data color;
+- use Deep Purple for total / baseline / strategic benchmark;
+- use Tech Red only for risk / negative / decline;
+- use Zest Green only for opportunity / growth / positive signal;
+- avoid using too many categorical colors;
+- if the data does not require multiple colors, use one brand color plus neutral gray.
+
+### 3.5 Backgrounds
+
+Preferred backgrounds:
+
+- `#FFFFFF` for slides with dense content;
+- `#ECECEC` for dashboard page background;
+- `#2B0A3D` for divider slides or strong contrast hero blocks;
+- `#0070AD` or `#12ABDB` for occasional brand shapes, never as a default full background unless the slide is a divider or hero.
+
+Do not use:
+
+- random dark navy;
+- black backgrounds except when required for contrast;
+- off-brand beige;
+- generic SaaS gradients;
+- high-saturation colors outside the Capgemini palette.
+
+---
+
+## 4. Typography
+
+### 4.1 Preferred typeface
+
+Use **Ubuntu** as the primary brand typeface when available.
+
+Weights:
+
+```text
+Ubuntu Light
+Ubuntu Regular
+Ubuntu Medium
+Ubuntu Bold
+```
+
+Usage:
+
+- large headlines: Ubuntu Bold or Ubuntu Medium;
+- section labels: Ubuntu Medium or Bold;
+- body text: Ubuntu Regular or Light;
+- captions and sources: Ubuntu Light or Regular;
+- small UI labels: Ubuntu Medium.
+
+### 4.2 Fallback typeface
+
+If Ubuntu is unavailable, use **Verdana** as the system fallback.
+
+Recommended CSS:
+
+```css
+font-family: Ubuntu, Verdana, Arial, Helvetica, sans-serif;
+```
+
+Verdana should be used for reliability in business contexts. Use Verdana Bold sparingly because it appears very heavy.
+
+### 4.3 Tracking and line height
+
+Capgemini uses slightly negative tracking.
+
+For HTML:
+
+```css
+body {
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.015em;
+}
+```
+
+Recommended line heights:
+
+```css
+h1 { line-height: 0.95; }
+h2 { line-height: 1.05; }
+h3 { line-height: 1.15; }
+p  { line-height: 1.45; }
+small, .source { line-height: 1.3; }
+```
+
+### 4.4 HTML type scale
+
+Use this default scale for dashboards.
+
+```css
+.text-eyebrow {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(40px, 5vw, 72px);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(28px, 3vw, 44px);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.body-large {
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+.body {
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.caption,
+.source {
+  font-size: 11px;
+  line-height: 1.3;
+}
+```
+
+### 4.5 PowerPoint type hierarchy
+
+Use this hierarchy for 16:9 slides.
+
+```text
+Cover title: 44–60 pt, Ubuntu Bold or Medium
+Section title: 40–54 pt, Ubuntu Bold
+Slide title: 28–36 pt, Ubuntu Bold or Medium
+Subtitle / intro copy: 16–22 pt, Ubuntu Regular
+Body: 11–16 pt, Ubuntu Regular
+Caption / source: 7–9 pt, Ubuntu Light or Regular
+KPI number: 36–54 pt, Ubuntu Bold
+KPI label: 9–12 pt, Ubuntu Medium
+```
+
+Keep title lines short.
+
+Prefer insight-driven titles.
+
+Do not use long paragraph titles.
+
+---
+
+## 5. Logo usage
+
+### 5.1 Logo asset
+
+Use the provided Capgemini logo file.
+
+Do not recreate it.
+
+Do not use text typed as “Capgemini” as a replacement for the logo.
+
+### 5.2 Clear space
+
+The minimum clear space around the Capgemini logo is equal to the width of the spade symbol inside the logo.
+
+If space is extremely constrained, the clear space may be reduced to 50% of the spade width, but this should be exceptional.
+
+No text, chart, card, line, border, image or partner logo should enter the clear space.
+
+### 5.3 Minimum size
+
+Never use the logo smaller than:
+
+```text
+30 mm wide in print
+175 px wide on screen
+```
+
+For small digital cards or narrow mobile layouts, use the full logo if still legible. If the full logo cannot be used clearly, use a simpler header layout rather than forcing a tiny logo.
+
+### 5.4 Logo placement
+
+Preferred positions:
+
+```text
+Top left
+Top right
+```
+
+Alternative positions:
+
+```text
+Bottom left
+Bottom right
+Centered only for covers, signage-like pages, or hero slides
+```
+
+For HTML dashboards:
+
+- place the logo in the top header;
+- keep it left-aligned when possible;
+- avoid repeating the logo inside every card.
+
+For PowerPoint:
+
+- cover slide: logo may be top left, top right or centered depending on layout;
+- content slides: logo should usually sit in a top corner or footer;
+- appendix/source slides: small logo in header or footer.
+
+### 5.5 Co-branding
+
+When co-branding:
+
+- Capgemini should remain prominent;
+- partner logos should sit on the same baseline;
+- separate logos by at least the logo clear space;
+- a vertical divider line may be used between logos;
+- partner logos must not visually dominate Capgemini.
+
+For this workshop, if IQ Project is also present:
+
+```text
+Capgemini | IQ Project
+```
+
+or
+
+```text
+IQ Project × Capgemini
+```
+
+may be used only if already specified by the exercise context. For participant-generated outputs, prioritize Capgemini unless the participant requests co-branding.
+
+### 5.6 Incorrect logo usage
+
+Never:
+
+- apply drop shadows to the logo;
+- outline the logo;
+- redraw the logo;
+- recreate the wordmark;
+- alter the proportions;
+- change the size relationship between wordmark and spade;
+- use the wordmark without the spade;
+- rearrange the logo components;
+- recolor the logo;
+- attach text directly to the logo;
+- distort or stretch the logo;
+- place a pattern behind the logo;
+- box the logo;
+- place the two-color logo on Tech Red;
+- place the logo over a cluttered photograph.
+
+---
+
+## 6. Spade symbol and brand shapes
+
+### 6.1 Spade symbol
+
+The spade symbol is not a decorative icon and not a second logo.
+
+Use it only when:
+
+- space is too limited for the full logo;
+- the full logo has already appeared elsewhere;
+- a favicon / app icon / compact identifier is needed.
+
+Do not use the spade:
+
+- as a pattern;
+- as a background;
+- as a text container;
+- as a random icon;
+- as a chart marker;
+- as a decorative bullet;
+- as a holding shape;
+- in unapproved colors;
+- with text placed over it.
+
+### 6.2 Brand shapes
+
+Capgemini uses flexible brand shapes inspired by the spade.
+
+The shapes are:
+
+- curved;
+- fluid;
+- dynamic;
+- sometimes folded;
+- sometimes sharp or pinched at a point;
+- used to create pace and visual recognition.
+
+They can be used as:
+
+- holding devices for text;
+- background blocks;
+- photography containers;
+- infographic accents;
+- section divider shapes;
+- hero cover elements.
+
+If exact Capgemini shape artwork is unavailable, approximate the spirit with:
+
+- large curved blocks;
+- rounded asymmetric panels;
+- cropped blobs with one sharp or pinched corner;
+- clean geometric shapes that feel fluid and precise.
+
+Do not recreate the spade symbol itself.
+
+Do not use the logo as a shape.
+
+### 6.3 One-color shapes
+
+Use one-color shapes for everyday layouts.
+
+Rules:
+
+- may use any brand color;
+- should usually bleed off at least one edge;
+- can be scaled;
+- can be rotated;
+- can be flipped horizontally or vertically;
+- must not clutter the page;
+- should help structure content.
+
+Best use cases:
+
+- section dividers;
+- hero shapes;
+- key insight highlight blocks;
+- background accent in PPT;
+- dashboard hero panel.
+
+### 6.4 Two-color shapes
+
+Use two-color shapes for high-value touchpoints.
+
+Rules:
+
+- must contain two contrasting colors;
+- must always include either Capgemini Blue or Vibrant Blue;
+- can be paired with Tech Red, Zest Green or Deep Purple;
+- should usually bleed off at least one edge;
+- should be used sparingly.
+
+Best use cases:
+
+- cover slide;
+- final takeaway slide;
+- major dashboard header;
+- event opening screen.
+
+### 6.5 Shape volume
+
+Use shape volume according to the tone:
+
+```text
+No shape = maximum clarity
+Small shape = considered clarity
+Medium shape = vibrant dynamism
+Large shape = high visual energy
+Bespoke shape = only when explicitly needed
+```
+
+For COMEX dashboards and decks:
+
+- use no shape or small shape for content slides;
+- use medium shape for section dividers;
+- use large shape only for covers or hero pages.
+
+### 6.6 Shapes and typography
+
+When placing text with brand shapes:
+
+- type should preferably sit inside the shape when the shape is the main text container;
+- ensure strong contrast between type and shape;
+- at least 80% of the headline should sit inside the shape if the shape is used as a headline container;
+- align type with logo positioning;
+- type may sit outside the shape if it remains clearly aligned and readable;
+- never let the shape reduce legibility.
+
+---
+
+## 7. Layout principles
+
+### 7.1 Overall composition
+
+Capgemini layouts should feel:
+
+- clean;
+- structured;
+- spacious;
+- precise;
+- confident;
+- not generic;
+- not overdecorated.
+
+Use a clear grid.
+
+Use enough white or gray space.
+
+Every page or slide should have a dominant message.
+
+### 7.2 Margin system
+
+Use generous margins.
+
+Recommended HTML dashboard:
+
+```css
+.dashboard-shell {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+@media (max-width: 800px) {
+  .dashboard-shell {
+    padding: 20px;
+  }
+}
+```
+
+Recommended PowerPoint 16:9:
+
+```text
+Top margin: 5–7% of slide height
+Bottom margin: 5–7% of slide height
+Left margin: 5–7% of slide width
+Right margin: 5–7% of slide width
+```
+
+Logo alignment should influence the main content alignment.
+
+### 7.3 Grid
+
+Preferred dashboard grid:
+
+```text
+12-column grid
+24px gutters on desktop
+16px gutters on tablet
+Single column on mobile
+```
+
+Preferred PowerPoint grid:
+
+```text
+3-column or 4-column content grid
+large title area
+body below or to the side
+footer/source line at bottom
+```
+
+### 7.4 Spacing scale
+
+Use a consistent spacing scale.
+
+```css
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 40px;
+  --space-8: 56px;
+  --space-9: 72px;
+}
+```
+
+Do not use random spacing.
+
+### 7.5 Content density
+
+For COMEX:
+
+- fewer elements;
+- stronger hierarchy;
+- clear title;
+- visible conclusions;
+- source-backed claims;
+- limited but useful charts.
+
+Avoid:
+
+- walls of text;
+- overcrowded tables;
+- too many colors;
+- too many icons;
+- dashboards that require explanation to understand.
+
+---
+
+## 8. HTML dashboard design system
+
+Use this as the default HTML foundation.
+
+### 8.1 HTML dashboard structure
+
+Every strategic monitoring dashboard should follow this structure:
+
+```text
+1. Header
+2. Executive summary
+3. KPI row
+4. Priority signals
+5. Risk / opportunity view
+6. Detailed sourced table
+7. Source appendix or source panel
+```
+
+### 8.2 Header
+
+Header must include:
+
+- Capgemini logo;
+- radar name;
+- use case;
+- last updated date;
+- source coverage / confidence indicator when useful.
+
+Header design:
+
+- clean;
+- strong;
+- brand-colored accent;
+- no clutter;
+- no decorative background unless using a controlled brand shape.
+
+### 8.3 Executive summary
+
+Place the executive summary near the top.
+
+It should include:
+
+- 3 to 5 bullets;
+- strongest signals;
+- key risk;
+- key opportunity;
+- recommended executive action.
+
+Each executive summary bullet must be traceable to a source.
+
+### 8.4 KPI row
+
+Use 3 to 5 KPI cards.
+
+Possible KPIs:
+
+- monitored entities;
+- new signals;
+- high-priority signals;
+- risks;
+- opportunities;
+- weak signals;
+- source coverage.
+
+KPI card design:
+
+- large number;
+- short label;
+- optional delta;
+- subtle border;
+- no heavy shadow;
+- brand color accent.
+
+### 8.5 Signal cards
+
+Signal cards must include:
+
+- entity / topic;
+- signal title;
+- short summary;
+- date;
+- priority;
+- risk / opportunity label;
+- confidence level;
+- source link.
+
+Do not create unsourced signal cards.
+
+### 8.6 Risk and opportunity badges
+
+Use semantic color carefully:
+
+```css
+.badge-risk {
+  background: rgba(255, 48, 76, 0.12);
+  color: #B00020;
+  border: 1px solid rgba(255, 48, 76, 0.35);
+}
+
+.badge-opportunity {
+  background: rgba(149, 230, 22, 0.18);
+  color: #3E6B00;
+  border: 1px solid rgba(149, 230, 22, 0.45);
+}
+
+.badge-watch {
+  background: rgba(18, 171, 219, 0.14);
+  color: #0070AD;
+  border: 1px solid rgba(18, 171, 219, 0.38);
+}
+```
+
+### 8.7 Tables
+
+Tables should be clean and readable.
+
+Rules:
+
+- sticky header if useful;
+- source URL must be clickable;
+- avoid too many columns visible at once;
+- use horizontal scroll if necessary;
+- preserve full source information;
+- do not hide source links behind vague labels if clarity suffers.
+
+### 8.8 Source display
+
+Every important insight must have a source.
+
+Use:
+
+```html
+<a class="source-link" href="SOURCE_URL" target="_blank" rel="noopener">Source name</a>
+```
+
+Source links should be visible.
+
+Do not put all sources only at the bottom if the user cannot trace which source supports which claim.
+
+### 8.9 Dashboard CSS starter
+
+Use this CSS foundation when generating HTML dashboards.
+
+```css
+:root {
+  --capgemini-blue: #0070AD;
+  --vibrant-blue: #12ABDB;
+  --deep-purple: #2B0A3D;
+  --tech-red: #FF304C;
+  --zest-green: #95E616;
+  --capgemini-gray: #ECECEC;
+  --white: #FFFFFF;
+
+  --bg-page: #ECECEC;
+  --bg-surface: #FFFFFF;
+  --bg-surface-soft: #F7F9FB;
+  --text-main: #1C1C1C;
+  --text-strong: #2B0A3D;
+  --text-muted: #5F6B73;
+  --text-inverse: #FFFFFF;
+  --border-subtle: #D7DEE3;
+  --link: #0070AD;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Ubuntu, Verdana, Arial, Helvetica, sans-serif;
+  letter-spacing: -0.01em;
+  background: var(--bg-page);
+  color: var(--text-main);
+}
+
+.dashboard-shell {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.logo {
+  width: 180px;
+  max-width: 30vw;
+  height: auto;
+}
+
+.eyebrow {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--capgemini-blue);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: 0.95;
+  font-weight: 700;
+  color: var(--text-strong);
+}
+
+h2 {
+  margin: 0 0 16px 0;
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.05;
+  font-weight: 700;
+  color: var(--text-strong);
+}
+
+h3 {
+  margin: 0 0 8px 0;
+  font-size: 22px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: var(--text-strong);
+}
+
+p {
+  line-height: 1.45;
+}
+
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.kpi-value {
+  font-size: 44px;
+  line-height: 0.95;
+  font-weight: 700;
+  color: var(--capgemini-blue);
+}
+
+.kpi-label {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.3;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.source-link {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.source-line {
+  margin-top: 12px;
+  font-size: 11px;
+  line-height: 1.3;
+  color: var(--text-muted);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.badge-risk {
+  background: rgba(255, 48, 76, 0.12);
+  color: #B00020;
+  border: 1px solid rgba(255, 48, 76, 0.35);
+}
+
+.badge-opportunity {
+  background: rgba(149, 230, 22, 0.18);
+  color: #3E6B00;
+  border: 1px solid rgba(149, 230, 22, 0.45);
+}
+
+.badge-watch {
+  background: rgba(18, 171, 219, 0.14);
+  color: #0070AD;
+  border: 1px solid rgba(18, 171, 219, 0.38);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+th {
+  text-align: left;
+  color: var(--text-strong);
+  font-weight: 700;
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 12px;
+}
+
+td {
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 12px;
+  vertical-align: top;
+}
+
+@media (max-width: 900px) {
+  .dashboard-shell {
+    padding: 20px;
+  }
+
+  .header,
+  .grid-2,
+  .grid-3,
+  .kpi-grid {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+}
+```
+
+### 8.10 HTML forbidden patterns
+
+Do not create:
+
+- generic dark-mode SaaS dashboards;
+- neon dashboards;
+- glassmorphism;
+- excessive gradients;
+- rounded cards with random pastel colors;
+- dashboards without visible source links;
+- full-screen tables with no hierarchy;
+- decorative icons that do not aid navigation;
+- fake charts without data;
+- unsourced executive summaries.
+
+---
+
+## 9. PowerPoint design system
+
+### 9.1 Format
+
+Use 16:9.
+
+Default structure:
+
+```text
+Top area: logo / section label
+Main area: insight-driven title and content
+Bottom area: source line / footer
+```
+
+### 9.2 Slide types
+
+Recommended deck structure for the strategic monitoring exercise:
+
+```text
+1. Cover slide
+2. Executive summary
+3. Monitoring scope
+4. Top signals
+5. Risks and opportunities
+6. Recommended actions
+7. Source appendix
+```
+
+Use fewer slides if the participant asks for a short deck.
+
+Do not generate too many slides for a COMEX presentation.
+
+### 9.3 Cover slide
+
+Cover slide should include:
+
+- Capgemini logo;
+- radar title;
+- date;
+- use case;
+- one controlled brand shape if useful;
+- no clutter.
+
+Possible cover layout:
+
+```text
+Logo top-left or top-right
+Large title left-aligned
+Subheading below
+Brand shape bleeding off one edge
+Date in small type
+```
+
+### 9.4 Content slide
+
+Content slide should include:
+
+- insight-driven title;
+- maximum 3 major blocks;
+- source line;
+- clean grid;
+- no unnecessary decoration.
+
+Use one of these structures:
+
+```text
+Title + 3 insight cards
+Title + chart + interpretation
+Title + risk/opportunity split
+Title + table + executive takeaway
+Title + recommendation ladder
+```
+
+### 9.5 Divider slide
+
+Divider slide may use:
+
+- Deep Purple background;
+- Capgemini Blue or Vibrant Blue shape;
+- short title;
+- minimal text;
+- logo in a clear area.
+
+### 9.6 Slide titles
+
+Titles must carry meaning.
+
+Avoid:
+
+```text
+Market overview
+Key findings
+Data analysis
+Risks
+Recommendations
+```
+
+Prefer:
+
+```text
+AI regulatory signals are accelerating across Europe
+Three competitors are repositioning around agentic transformation
+Client buying signals are increasing in two priority accounts
+The main risk is not technology maturity, but organizational adoption
+```
+
+### 9.7 Sources in PowerPoint
+
+Every key claim must be traceable.
+
+Use one or more:
+
+- source line at bottom of each slide;
+- small footnote near claim;
+- source appendix;
+- source table;
+- clickable links when possible.
+
+Example source footer:
+
+```text
+Sources: Capgemini analysis based on [Source 1], [Source 2], [Source 3]. Full links in appendix.
+```
+
+Do not hide all sources if it becomes impossible to know which source supports which statement.
+
+### 9.8 PPT visual rules
+
+Use:
+
+- Ubuntu if available;
+- Verdana fallback;
+- Capgemini colors;
+- large titles;
+- clear cards;
+- simple charts;
+- strong alignment;
+- restrained brand shapes;
+- white / gray space.
+
+Avoid:
+
+- too much text;
+- dense tables;
+- generic consulting icons;
+- random gradients;
+- shadow-heavy boxes;
+- inconsistent colors;
+- unsupported claims;
+- decorative spade usage.
+
+---
+
+## 10. Charts, graphs and infographics
+
+### 10.1 General principles
+
+Charts and diagrams must be:
+
+- clear;
+- not overcomplicated;
+- made from simple geometric shapes;
+- colored with approved brand colors;
+- supported by a title;
+- supported by a descriptor or unit when appropriate;
+- accompanied by a source.
+
+Sometimes a simple table or list is better than a complicated diagram.
+
+### 10.2 Chart styling
+
+Use:
+
+- flat colors;
+- enough contrast between data series;
+- left-aligned chart headings;
+- clear labels;
+- controlled color use;
+- simple gridlines;
+- no decorative effects.
+
+Avoid:
+
+- 3D charts;
+- heavy shadows;
+- random colors;
+- too many series;
+- unreadable labels;
+- charts without units;
+- charts without sources.
+
+### 10.3 Chart heading style
+
+For PPT-like charts:
+
+```text
+Chart heading: Ubuntu Medium, sentence case
+Descriptor: Ubuntu Light, sentence case
+Color key: Ubuntu Light, sentence case
+```
+
+For HTML charts:
+
+```css
+.chart-title {
+  font-family: Ubuntu, Verdana, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #2B0A3D;
+}
+
+.chart-descriptor {
+  font-size: 13px;
+  color: #5F6B73;
+}
+
+.chart-source {
+  font-size: 11px;
+  color: #5F6B73;
+}
+```
+
+### 10.4 Color grouping
+
+For simple charts, use colors that harmonize with the layout.
+
+For complex charts, start with the Blue / Purple grouping, then add only one additional color group if required.
+
+Recommended order:
+
+```text
+1. Capgemini Blue
+2. Vibrant Blue
+3. Deep Purple
+4. Capgemini Blue 50% tint
+5. Vibrant Blue 50% tint
+6. Tech Red only for risk or negative movement
+7. Zest Green only for opportunity or positive movement
+```
+
+Use as few colors as possible.
+
+### 10.5 Infographic rule
+
+Infographics should turn data into insight.
+
+Do not create an infographic for decoration.
+
+Use icons sparingly.
+
+Icons must be:
+
+- appropriate;
+- efficient;
+- precise;
+- engaging;
+- simple;
+- immediately understandable.
+
+---
+
+## 11. Icons and simple illustrations
+
+### 11.1 Icons
+
+Icons should aid navigation or clarify content.
+
+Use icons only when they make the information easier to understand.
+
+Do not use icons just to fill space.
+
+Capgemini-style icons:
+
+- simple;
+- single-minded;
+- immediately recognizable;
+- minimal;
+- usually white icon over a simple colored shape;
+- maximum three colors.
+
+If creating custom icons:
+
+- use simple geometry;
+- avoid detailed illustration;
+- use approved colors only;
+- keep icon meaning unique;
+- do not reuse the same icon for different concepts.
+
+### 11.2 Illustrations
+
+Use illustration only when it helps tell the story.
+
+Style:
+
+- bold;
+- simple;
+- graphic;
+- geometric;
+- minimal;
+- colorful;
+- conceptual;
+- clean.
+
+Avoid:
+
+- complex decorative illustration;
+- cliché technology metaphors;
+- childish clip art;
+- random AI robot illustrations;
+- generic 3D icons;
+- overly detailed scenes.
+
+---
+
+## 12. Photography
+
+For this workshop, photography is optional.
+
+If using photography, follow these rules.
+
+### 12.1 Preferred style
+
+Photography should be:
+
+- cut-out;
+- sharp and in focus;
+- minimal;
+- spacious;
+- playful;
+- candid;
+- human;
+- dynamic;
+- set against Capgemini gray;
+- showing people, technology, or the benefit of technology.
+
+### 12.2 People photography
+
+People should feel:
+
+- diverse;
+- active;
+- dynamic;
+- modern;
+- individual;
+- human;
+- not stiff corporate stock.
+
+Clothing should be sophisticated and mostly solid colors.
+
+### 12.3 Technology photography
+
+Technology should:
+
+- include or imply human presence;
+- show the benefit of technology;
+- feel innovative;
+- not be overtly branded;
+- be minimal and understated.
+
+### 12.4 Photography watch-outs
+
+Do not use:
+
+- blurry images;
+- dark imagery;
+- weak color contrast;
+- cluttered backgrounds;
+- cliché technology images;
+- animals;
+- CGI;
+- overtly branded technology;
+- abstract objects with no meaning;
+- generic business handshake photos.
+
+If no approved photography is available, prefer clean typography, cards, charts and brand shapes.
+
+---
+
+## 13. Tone of voice
+
+Capgemini’s voice is:
+
+- straightforward;
+- professional;
+- natural;
+- human;
+- fresh;
+- distinctive;
+- factual.
+
+Avoid:
+
+- vague generalizations;
+- buzzwords;
+- condescension;
+- unsupported claims;
+- overcomplicated sentences;
+- generic transformation jargon.
+
+Use:
+
+- simple sentences;
+- clear recommendations;
+- evidence;
+- business outcomes;
+- collaborative language;
+- “we”, “our team”, “you” when relevant.
+
+Words that fit the brand:
+
+```text
+Collaboration
+Flexibility
+Innovation
+Results
+Knowledge
+Commitment
+People
+Technology
+Execution
+```
+
+For this workshop, generated content should be:
+
+- in English;
+- concise;
+- executive-level;
+- evidence-backed;
+- free of unnecessary jargon.
+
+---
+
+## 14. Source design rules
+
+Sources are part of the design system.
+
+They must be visible and usable.
+
+### 14.1 HTML
+
+Every important insight, signal, risk, opportunity or recommendation should include a clickable source link.
+
+Use visible source links.
+
+Do not hide all sources at the bottom if it breaks traceability.
+
+### 14.2 PowerPoint
+
+Each slide with factual claims must include:
+
+- source footer;
+- or footnotes;
+- or numbered source references;
+- or source appendix references.
+
+Use small type, but sources must remain readable.
+
+### 14.3 Excel
+
+Every enriched signal should include:
+
+- source name;
+- source URL;
+- date;
+- confidence / source quality if relevant.
+
+---
+
+## 15. Deliverable-specific instructions
+
+### 15.1 For HTML dashboard generation
+
+When generating an HTML dashboard:
+
+1. Read this file.
+2. Use the Capgemini logo.
+3. Use the color tokens.
+4. Use the CSS foundation.
+5. Create a clear executive dashboard.
+6. Include clickable sources.
+7. Avoid raw table dumps.
+8. Use Capgemini-style cards, KPI blocks and clean charts.
+9. Use brand shapes only as controlled accents.
+10. Make the dashboard readable on screen.
+
+### 15.2 For PowerPoint generation
+
+When generating a PowerPoint:
+
+1. Use 16:9 format.
+2. Use the Capgemini logo.
+3. Use Capgemini colors.
+4. Use Ubuntu or Verdana fallback.
+5. Use insight-driven titles.
+6. Use one message per slide.
+7. Include visible source references.
+8. Use brand shapes sparingly.
+9. Keep it COMEX-ready.
+10. Do not create too many slides.
+
+---
+
+## 16. Quick reference checklist
+
+Before finalizing any HTML or PowerPoint output, check:
+
+- Is the Capgemini logo used correctly?
+- Is the layout clean and precise?
+- Are colors from the approved palette?
+- Is the typography readable?
+- Is the hierarchy clear?
+- Are sources visible?
+- Are links clickable in HTML?
+- Are recommendations traceable?
+- Are charts simple and sourced?
+- Is the output executive-ready?
+- Does it avoid generic dashboard / generic consulting design?
+- Does it feel like Capgemini?
+
+---
+
+## 17. Minimal safe mode
+
+If you are unsure how to apply a complex Capgemini visual element, use this safe mode:
+
+```text
+White or Capgemini Gray background
+Capgemini logo in a clear top corner
+Deep Purple or Capgemini Blue titles
+Vibrant Blue accents
+Clean white cards
+Simple flat charts
+Visible sources
+No decorative spade
+No complex shapes
+No random illustration
+```
+
+This safe mode is always preferable to creating an inaccurate or off-brand design.
+
